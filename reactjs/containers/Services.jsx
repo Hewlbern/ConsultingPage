@@ -1,36 +1,46 @@
 import React from "react"
-import Jumbotron from 'react-bootstrap/lib/Jumbotron';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
-import Grid from 'react-bootstrap/lib/Grid';
+import Pageheader from 'react-bootstrap/lib/Pageheader'
+import Video from "./Video"
+import Grid from 'react-bootstrap/lib/Grid'
+import Row from 'react-bootstrap/lib/Row'
+import Col from 'react-bootstrap/lib/Col'
+
 
 export default class Services extends React.Component {
   render() {
+      var textStyle = {
+          textAlign: 'center', // <-- the magic
+          fontWeight: 'bold',
+          fontSize: 18,
+          marginTop: 0,
+          width: 200,
+      };
     return (
         <div id = "services">
-            <Jumbotron>
+            <Pageheader justified>
+                About M2 Consulting
+            </Pageheader>
+            <p1 style = {textStyle}>A Digital Agency here to help you advertise more cheaply and more effectively</p1>
+            <Video/>
+            <div>
                 <Grid>
-                    <h1>M2 Consulting</h1>
-                    <p>Bringing Small Businesses to the Agile century</p>
+                    <Row className="show-grid">
+                        <Col  xs={12} md={8}>
+                        Experienced Videography and Photography - Digital Marketing Strategy is key to staying alive in 2017.
+                        </Col>
+                    </Row>
+                    <Row className="show-grid">
+                        <Col  xs={12} md={8}>
+                            Social Media Marketing - Leverage your amazing content to engage more people
+                        </Col>
+                    </Row>
+                    <Row className ="show-grid">
+                        <Col  xs={12} md={8}>
+                        We provide the best in digital content for your business
+                        </Col>
+                    </Row>
                 </Grid>
-            </Jumbotron>
-
-            <Grid>
-                <Row>
-                    <Col md={3}>
-                        <h2>Ride the Tiger</h2>
-                        <p>Control your online presence</p>
-                    </Col>
-                    <Col md={3}>
-                        <h2>Utilize Online Channels</h2>
-                        <p>Guarantee more revenue</p>
-                    </Col>
-                    <Col md={3}>
-                        <h2>Improve your process</h2>
-                        <p>Embrace the lean manifesto</p>
-                    </Col>
-                </Row>
-            </Grid>
+            </div>
         </div>
     )
   }
